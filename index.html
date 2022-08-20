@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Brad D. Wagner - portfolio</title>
 </head>
 
 <body>
-    <header class="row">
+    <header class="header-box">
         <div class="name">
             <h1>
                 Brad D. Wagner
@@ -17,20 +18,23 @@
         </div>
         <nav class="nav-bar">
             <ul>
-                <li>About Me</li>
-                <li>Work</li>
-                <li>Contact</li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <figure>
+        <img id="headshot" src="./assets/images/headshot.png" >
+    </figure>
     
     <main>
 
-        <section class="row">
+        <section id="about-me" class="row">
             <div class="heading-box">
                 <h2>
-                    About<br> 
-                    Me
+                    About Me
                 </h2>
             </div>
             <p class="card">
@@ -40,7 +44,7 @@
             </p>
         </section>
 
-        <section class="row">
+        <section id="work" class="row">
             <div class="heading-box">
                 <h2>
                     Work
@@ -55,7 +59,7 @@
             </div>
         </section>
 
-        <section class="row">
+        <section id="contact" class="row">
             <div class="heading-box">
                 <h2>
                     Contact
