@@ -5,19 +5,41 @@
     --cherry: #d5b6bc;
 }
 
-body{
-    background-color: var(--wood);
+* {
+    box-sizing: border-box;
 }
 
-
-header nav li{
-    display: inline;
+body{
+    background-color: var(--wood);
 }
 
 h1,
 h2,
 h3 {
     color: var(--matte);
+}
+
+.name {
+    width: 50%;
+    font-size: 25px;
+}
+
+
+.nav-bar{
+    text-align:initial;
+    width: 50%;
+}
+
+.nav-bar ul{
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+header nav li{
+    display: inline;
+    font-size: 30px;
+    flex: 1 0 auto;
+
 }
 
 section{
@@ -28,20 +50,17 @@ section{
 
 h2{
     background-color: var(--ivory);
+    font-size: 50px;
+    margin-top: 20px;
 }
-
-.card{
-    background-color: var(--cherry);
-}
-
 
 
 .row{
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
     flex-direction: row;
-    justify-content: center;
-    align-content: space-between;
+    /* justify-content: center; */
+    /* align-content: space-between; */
 }
 
 
@@ -49,22 +68,39 @@ h2{
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content:baseline;
+    justify-content: flex-start;
     /* align-content: space-between; */
     padding: 20px;
     
 }
 
-#cherry-blossom{
-    flex: 0 0 100%;
-}
+/* #cherry-blossom{
+    flex: 0 2 100%;
+} */
 img{
     max-height: 200px;
     flex: 0 0 auto;
     margin: 15px;
 }
 
-.about-me-card{
-    display: inline;
+.heading-box{
+    width: 20%;
+    text-align: right;
+    margin-right: 20px
     
 }
+
+.card{
+    background-color: var(--cherry);
+    width: 70%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   h2{
+    background-color: aqua;
+   }
+   .row {
+    flex-direction: column;
+   }
+    }
