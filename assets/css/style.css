@@ -7,6 +7,7 @@
 
 * {
     box-sizing: border-box;
+    color: var(--matte);
 }
 
 body{
@@ -62,16 +63,23 @@ h3 {
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex: 1 0 auto;
+}
+
+/* Uses pseudo-selectors to set different color states for the nav links  */
+.nav-bar ul a{
     color: var(--matte);
 }
-
 .nav-bar ul a:visited{
+    color: var(--matte);
+}
+.nav-bar ul a:hover{
     color: var(--ivory);
 }
-
-.nav-bar ul a:hover{
+.nav-bar ul a:active{
     color: var(--wood);
 }
+
+/* Creates environment for heading image and background and positions it below the fixed header  */
 figure{
     margin-top: 90px;
     width:100%;
@@ -80,40 +88,43 @@ figure{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* Sets size contraints on the headshot image and creates border  */
 #headshot{
    width: 30%;
    margin-bottom: -3px;
    border: 10px;
    border-style: solid;
    border-color: var(--wood);
+   max-height: 400px;
+   max-width: 400px;
 }
 
-
-section{
-    background-color: var(--matte);
-    padding: 10px;
-    margin: 10px;
-}
-
-h2{
-    /* background-color: var(--ivory); */
-    font-size: 50px;
-    margin-top: 20px;
-}
 
 /* Establishes flex-box around each of the three main sections and sets them to display in a row  */
 .row{
     display:flex;
     flex-wrap:nowrap;
     flex-direction: row;
+    background-color: var(--matte);
+    padding: 10px;
+    margin: 10px;
 }
 
 /* Creates a box for each of the h2, taking up the first 30% of the 'row' container, and aligns the text to the right of the box  */
-.heading-box{
+.label-box{
     width: 30%;
     text-align: right;
-    padding-right: 20px
-    
+    padding-right: 5%;
+    /* margin-right: 5%;
+    border-width: 10px;
+    border-right-style: solid;
+    border-color: var(--wood); */
+}
+
+.label-box h2{
+    font-size: 50px;
+    margin-top: 20px;
 }
 
 /* Creates a box for each of the different informational elements, setting them to take up the next 70% of the 'row' container  */
@@ -123,30 +134,34 @@ h2{
     padding: 20px;
 }
 
+
 /* Creates container for each 'work-box' card  */
 .work-container {
+    width: 70%;
     display: flex;
     flex-wrap:wrap;
     flex-direction:row;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
+    background-color: var(--matte);
 }
 
 /* Creates card for each image and text overlay, giving each half of the container's width and a third of its height  */
-.work-box{
+.work-image-box{
     position: relative;
-    width: 40%;
+    width: 42%;
     height: 33%;
     max-height: 400px;
     flex: 1 0 auto;
-    margin: 15px;
+    margin: 5px;
     overflow: hidden;
     border-style: solid;
     border-width: 7px;
     border-color: var(--wood);
 }
 
-.work-box:hover {
-    box-shadow: 0px 0px 15px var(--matte);
+/* Creates shadow around images while they're being hovered over  */
+.work-image-box:hover {
+    box-shadow: 0px 0px 15px var(--cherry);
 }
 
 /* Overrides the width setting from the 'work-box' in order to allow the latest image to take up its own row  */
@@ -154,74 +169,67 @@ h2{
     min-width:100%;
 }
 
-
 /* Removes the text from the flow in order to position it over the image and sets styling for text  */
 .overlay {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0px;
-    font-weight: bold;
-    font-size: 40px;
     padding: 10px;
+    width: 250px;
     background-color: var(--wood);
 }
-
-/* .work-box{
-    position: relative;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row; 
-    padding: 20px;
-    
-} */
-
-/* .work-box img{
-    position: relative;
-    max-width: 50%;
-    max-height: 500px;
-    flex: 1 0 auto;
-    padding: 15px;
-    object-fit: none;
+.overlay h3{
+    font-weight: bold;
+    font-size: 35px;
 }
 
-#::before {
-    content: "This is my text";
-    position:absolute;
-    left:0px;
-    min-width: 50%;
-    font-size: 200px;
-    color:aqua;
-} */
+/* Creates box for contact li's  */
+#contact ul{
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction:row;
+}
 
-
-/* #cherry-blossom img{
-    object-fit:fill;
-} */
-
-.row ul li{
+/* Sets positioning for contact li's  */
+#contact ul li{
     list-style-type: none;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin-top: 10px;
+    width: 25%;
 }
+
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
 
 @media screen and (max-width: 768px) {
-   h2{
-    padding-bottom: 20px;
-   }
+   
    .row,
    .header-box {
     flex-direction: column;
    }
+
    .name,
    .nav-bar {
     width: 100%;
     text-align:center;
     }
 
-    .heading-box,
-    .card{
+    .label-box,
+    .card,
+    .work-container{
         width: 100%;
         justify-content: center;
         text-align: center;
     }
+
+    .label-box{
+        padding-bottom: 10px;
+       }
 
     figure{
         margin-top: 120px;
