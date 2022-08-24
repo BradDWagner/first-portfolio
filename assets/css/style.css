@@ -1,3 +1,4 @@
+/* Declare color variables  */
 :root{
     --matte: #464646;
     --ivory: #ecf9fb;
@@ -5,25 +6,24 @@
     --cherry: #d5b6bc;
 }
 
+/* Sets formatting of containers so that children stay within the parent element  */
 * {
     box-sizing: border-box;
     color: var(--matte);
 }
 
+/* Set background color for the page  */
 body{
     background-color: var(--matte);
 }
 
+/* Sets font styling for 'Brad D. Wagner ' */
 h1 {
     color: var(--matte);
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 50px;
 }
 
-h2,
-h3 {
-    color: var(--cherry);
-}
 
 /* Sets flex-box for the header and establishes margins around it. Also extablishes it as a fixed element */
 .header-box{
@@ -116,13 +116,16 @@ figure{
     width: 30%;
     text-align: right;
     padding-right: 5%;
-    /* margin-right: 5%;
-    border-width: 10px;
+    margin-right: 2%;
+    margin-left: -2%;
+    border-width: 5px;
     border-right-style: solid;
-    border-color: var(--wood); */
+    border-color: var(--wood);
 }
 
+/* Sets font style for labels  */
 .label-box h2{
+    color: var(--cherry);
     font-size: 50px;
     margin-top: 20px;
 }
@@ -148,15 +151,16 @@ figure{
 /* Creates card for each image and text overlay, giving each half of the container's width and a third of its height  */
 .work-image-box{
     position: relative;
-    width: 42%;
+    width: 35%;
     height: 33%;
-    max-height: 400px;
+    max-height: 500px;
     flex: 1 0 auto;
-    margin: 5px;
+    margin: 35px;
     overflow: hidden;
     border-style: solid;
     border-width: 7px;
     border-color: var(--wood);
+
 }
 
 /* Creates shadow around images while they're being hovered over  */
@@ -165,8 +169,8 @@ figure{
 }
 
 /* Overrides the width setting from the 'work-box' in order to allow the latest image to take up its own row  */
-#latest-work{
-    min-width:100%;
+.work-image-box:first-child{
+    min-width:75%;
 }
 
 /* Removes the text from the flow in order to position it over the image and sets styling for text  */
@@ -178,7 +182,10 @@ figure{
     width: 250px;
     background-color: var(--wood);
 }
+
+/* Sets font styling for coding project titles  */
 .overlay h3{
+    color: var(--cherry);
     font-weight: bold;
     font-size: 35px;
 }
@@ -199,40 +206,81 @@ figure{
     width: 25%;
 }
 
+/* formats the footer element  */
 footer{
     text-align: center;
     padding: 20px;
     font-size: 20px;
+
+}
+
+footer h3{
+    color: var(--ivory);
 }
 
 
 @media screen and (max-width: 768px) {
-   
+    
+    /* Changes the flex direction from rows to columns  */
    .row,
    .header-box {
     flex-direction: column;
    }
 
+   /* Centers the heading elements horizontally instead of the previous 50/50 split  */
    .name,
    .nav-bar {
     width: 100%;
     text-align:center;
     }
 
+    /* Adjust font sizes to fit on smaller screens  */
+    h1 {
+        font-size: 35px;
+    }
+    .nav-bar ul li{
+        font-size: 20px;
+    }
+    .overlay h3{
+        font-size: 15px;
+        text-align: left;
+    }
+    .overlay p {
+        font-size: 12px;
+        text-align: left;
+    }
+    #contact li{
+        font-size: 10px;
+    }
+   
+    /* Re-adjusts headshot and backround to account for new size of nav-bar  */
+    figure{
+        margin-top: 95px;
+    }
+
+    /* Centers the different body elements horizontally instead of previous 30/70 split, and removes seperating vertical border  */
     .label-box,
     .card,
     .work-container{
         width: 100%;
         justify-content: center;
         text-align: center;
+        border-width: 0px;
     }
 
+    /* Adjusts padding below labels to align them closer to their content  */
     .label-box{
         padding-bottom: 10px;
        }
 
-    figure{
-        margin-top: 120px;
-    }
+    /* resizes link images to better fit smaller screen  */
+    .work-image-box{
+        margin:10px;
+        max-height: 200px;
+    } 
+
+  
+
+
 }
  
