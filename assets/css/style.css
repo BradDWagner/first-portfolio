@@ -113,7 +113,7 @@ figure{
 
 /* Creates a box for each of the h2, taking up the first 30% of the 'row' container, and aligns the text to the right of the box  */
 .label-box{
-    width: 30%;
+    width: 20%;
     text-align: right;
     padding-right: 5%;
     margin-right: 2%;
@@ -133,7 +133,7 @@ figure{
 /* Creates a box for each of the different informational elements, setting them to take up the next 70% of the 'row' container  */
 .card{
     background-color: var(--ivory);
-    width: 70%;
+    width: 80%;
     padding: 20px;
 }
 
@@ -216,6 +216,31 @@ footer{
 
 footer h3{
     color: var(--ivory);
+}
+
+@media screen and (max-width: 992px) {
+    /* Shrinks down size of the 'card' elements and expands the 'label-box' elements to better use space on a smaller screen  */
+   .card {
+    width: 70%;
+   }
+   .label-box{
+    width: 30%;
+   }
+
+   /* Shrinks down the size of image cards and their margins to better fit smaller screen  */
+   .work-image-box{
+    max-height: 300px;
+    margin: 20px;
+   }
+   
+    /* Shrink text to avoid cramming  */
+   .overlay h3{
+    font-size: 20px;
+    text-align: left;
+}
+   #contact ul li{
+    font-size: 12px;
+   }
 }
 
 
