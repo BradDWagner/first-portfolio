@@ -6,6 +6,12 @@
     --cherry: #d5b6bc;
 }
 
+/* Smooths out scrolling using navigation links and adds padding so that navbar doesn't cover destination  */
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top: 90px;
+}
+
 /* Sets formatting of containers so that children stay within the parent element  */
 * {
     box-sizing: border-box;
