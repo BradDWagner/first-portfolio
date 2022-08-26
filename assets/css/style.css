@@ -155,7 +155,7 @@ figure{
     height: 33%;
     max-height: 500px;
     flex: 1 0 auto;
-    margin: 35px;
+    margin: 35px 0px 35px 35px;
     overflow: hidden;
     border-style: solid;
     border-width: 7px;
@@ -188,6 +188,7 @@ figure{
     color: var(--cherry);
     font-weight: bold;
     font-size: 35px;
+    text-shadow: -1px 1px #4f232b;
 }
 
 /* Creates box for contact li's  */
