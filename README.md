@@ -7,7 +7,7 @@ The purpose of this first portfolio was to begin to develop a webpage that can e
 N/A
 
 ## Usage
-Deployed website can be found at [temporary link.](https://github.com/BradDWagner) 
+Deployed website can be found [here.](https://braddwagner.github.io/first-portfolio/) 
 The webpage is designed to be mobile friendly which can be seen by opening it on various devices, or by opening the site on Chrome and using Chrome DevTools by pressing Command+Option+I (macOS) or Control+Shift+I (Windows) and utilizing the various resizing options. 
 ![The webpage as displayed on a desktop screen.](./assets/images/desktop-dispay.png) ![The webpage as displayed on a tablet screen.](./assets/images/tablet-display.png) ![The webpage as displayed on a mobile screen.](./assets/images/mobile-display.png)
 
