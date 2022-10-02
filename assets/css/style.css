@@ -226,6 +226,15 @@ footer h3{
 }
 
 @media screen and (max-width: 992px) {
+    /* Shrinks down size of the 'card' elements and expands the 'label-box' elements to better use space on a smaller screen  */
+   .card,
+   .work-container {
+    width: 75%;
+   }
+   .label-box{
+    width: 25%;
+   }
+
    /* Shrinks down the size of image cards and their margins to better fit smaller screen  */
    .work-image-box{
     max-height: 300px;
